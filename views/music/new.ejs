@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Music</title>
+</head>
+<body>
+    <h1>Add New Music</h1>
+    <form action="/music" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required />
+        <br />
+        <label for="artist">Artist:</label>
+        <input type="text" name="artist" id="artist" required />
+        <br />
+        <label for="album">Album:</label>
+        <input type="text" name="album" id="album" required />
+        <br />
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre">
+        <br />
+        <label for="releaseYear">Year:</label>
+        <input type="number" name="releaseYear" id="releaseYear" required />
+        <br />
+        <label for="coverImg">Cover Image URL:</label>
+        <input type="text" name="coverImg" id="coverImg">
+        <br />
+        <label for="description">Description:</label>
+        <textarea name="description" id="description"></textarea>
+        <br />
+        <button type="submit">Add Music</button>
+    </form>
+    <a href="/music">Back to Music Collection</a>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit <%=musicEntry.title%></title>
+</head>
+<body>
+    <h1>Edit <%=musicEntry.title%></h1>
+    <form action="/music/<%=musicEntry._id%>?_method=PUT" method="POST">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="<%=musicEntry.title%>" required>
+        <br />
+        <label for="artist">Artist:</label>
+        <input type="text" name="artist" id="artist" value="<%=musicEntry.artist%>" required>
+        <br />
+        <label for="album">Album:</label>
+        <input type="text" name="album" id="album" value="<%=musicEntry.album%>" required>
+        <br />
+        <label for="genre">Genre:</label>
+        <input type="text" name="genre" id="genre" value="<%=musicEntry.genre%>">
+        <br />
+        <label for="releaseYear">Release Year:</label>
+        <input type="number" name="releaseYear" id="releaseYear" value="<%=musicEntry.releaseYear%>" required>
+        <br />
+        <label for="coverImg">Cover Image URL:</label>
+        <input type="text" name="coverImg" id="coverImg" value="<%=musicEntry.coverImg%>">
+        <br />
+        <label for="description">Description:</label>
+        <textarea name="description" id="description"><%=musicEntry.description%></textarea>
+        <br />
+        <button type="submit">Update Music</button>
+    </form>
+    <a href="/music<%=musicEntry._id%>">Back to Music Details</a>
+    
+</body>
+</html>

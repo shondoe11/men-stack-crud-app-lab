@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=musicEntry.title%> Details</title>
+</head>
+<body>
+    <h1><%=musicEntry.title%> by <%=musicEntry.artist%></h1>
+    <p><strong>Album:</strong> <%=musicEntry.album%></p>
+    <p><strong>Genre:</strong> <%=musicEntry.genre%></p>
+    <p><strong>Release Year:</strong><%=musicEntry.releaseYear%></p>
+    <% if (musicEntry.coverImg) {%>
+        <img src="<%=musicEntry.coverImg%>" alt="<%=musicEntry.title %> cover" style="max-width: 300px;">
+    <%}%>
+    <p><strong>Description:</strong> <%=musicEntry.description%></p>
+    <a href="/music/<%=musicEntry._id%>/edit">Edit</a>
+    <form action="/music/<%=musicEntry._id%>?_method=DELETE" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+    </form>
+    <br />
+    <a href="/music">Back to Music Collection</a>
+</body>
+</html>
